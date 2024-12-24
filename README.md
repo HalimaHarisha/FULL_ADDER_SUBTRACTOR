@@ -50,6 +50,30 @@ Developed by:HALIMA HARISHA A
 
 RegisterNumber:24901005
 
+
+~~~
+module exp4(a,b,c,sum,carry,BO,DIFF);
+
+input a,b,c;
+
+output sum,carry,BO,DIFF;
+
+wire abar;
+
+not (abar,a);
+
+assign sum=a^b^c; 
+
+assign carry=(a&b)|(a&c)|(b&c);
+
+assign diff=a^b^c;
+
+assign BO=(~a&b)|(~a&c)|(b&c);
+
+endmodule
+~~~
+
+
 **RTL Schematic**
 
 ![Screenshot 2024-12-06 215810](https://github.com/user-attachments/assets/c0b66f38-1791-47e1-945c-447eca44a4d7)
